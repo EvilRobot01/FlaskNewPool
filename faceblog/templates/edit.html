@@ -1,19 +1,11 @@
-{% extends 'base.html' %}
-
-{% block head %}
+{% extends 'base.html' %} {% block head %}
 <title>Edit Post</title>
-{% endblock %}
-
-{% block body %}
+{% endblock %} {% block body %}
 <h2>Edit Blog Post: </h2>
 <form action="/posts/edit/{{post.id}}" method="POST">
-    {{form.hidden_tag()}}
-    Title: <input type="text" name='title' id="title" value="{{post.title}}">
-    <br>
-    Post: <input type="text" name="content" id="content" value="{{post.content}}"
-    >
+    {{form.hidden_tag()}} Title: <input type="text" name='title' id="title" value="{{post.title}}">
+    <br> Post: <input type="text" name="content" id="content" value="{{post.content}}">
     <br>
     <input type="submit" value='Post'>
 </form>
-<hr> 
-{% endblock %}
+<hr> {% endblock %}
